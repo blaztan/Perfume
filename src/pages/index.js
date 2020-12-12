@@ -6,12 +6,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { graphql } from "gatsby"
+import Brands from "../components/brands"
 
 const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
       <Hero images={data.allFile.edges} />
+      <Brands />
     </Layout>
   )
 }

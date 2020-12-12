@@ -7,7 +7,7 @@ export const Banner = styled.div`
 `
 
 export const Hero = styled.div`
-  ${tw`flex items-center min-h-screen py-10`}
+  ${tw`flex items-center min-h-screen py-10 max-w-screen-2xl mx-auto px-4 sm:px-6 mb-20 relative`}
 `
 
 export const ImageContainer = styled.div`
@@ -24,10 +24,6 @@ export const HeroText = styled.div`
 
 export const Title = styled.h1`
   ${tw`text-6xl mb-8`}
-`
-
-export const Para = styled.p`
-  ${tw`text-2xl text-gray-500`}
 `
 
 export const Button = styled.button`

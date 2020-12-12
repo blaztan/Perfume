@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import "fontsource-francois-one"
 import "fontsource-josefin-sans"
 import GlobalStyles from "../../assets/styles/globalStyles"
-import * as Styled from "./style"
 
 import Header from "../header/index"
 
@@ -23,7 +22,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Styled.Container>{children}</Styled.Container>
+      <main>{children}</main>
     </>
   )
 }

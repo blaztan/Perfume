@@ -2,6 +2,8 @@ import Image from "../../components/image"
 import React from "react"
 import * as Styled from "./style"
 import { graphql, useStaticQuery } from "gatsby"
+import Paragraph from "../ui/Paragraph"
+import Button from "../ui/Button"
 
 export default function Hero({ images }) {
   const { markdownRemark } = useStaticQuery(graphql`
@@ -22,11 +24,11 @@ export default function Hero({ images }) {
         <Styled.Banner>
           <Styled.HeroText>
             <Styled.Title>{markdownRemark.frontmatter.title}</Styled.Title>
-            <Styled.Para>{markdownRemark.frontmatter.content}</Styled.Para>
-            <Styled.Button>
+            <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
+            <Button>
               <Styled.Line />
               <span>{markdownRemark.frontmatter.linkText}</span>
-            </Styled.Button>
+            </Button>
           </Styled.HeroText>
           <Image fluid={images[0].node.childImageSharp.fluid} />
           <Styled.ImageContainer>
