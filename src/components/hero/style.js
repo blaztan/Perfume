@@ -26,9 +26,6 @@ export const Title = styled.h1`
   ${tw`text-6xl mb-8`}
 `
 
-export const Button = styled.button`
-  ${tw`bg-gray-900 px-8 flex items-center absolute bottom-0 left-0 py-4 text-2xl text-white my-auto`}
-`
 export const Line = styled.span`
   ${tw`w-16 h-0.5 bg-white inline-block mr-2`}
 `

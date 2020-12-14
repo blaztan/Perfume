@@ -1,12 +1,12 @@
 import React from "react"
-//import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
+
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { graphql } from "gatsby"
 import Brands from "../components/brands"
+import About from "../components/about"
 
 const Home = ({ data }) => {
   return (
@@ -14,6 +14,7 @@ const Home = ({ data }) => {
       <SEO title="Home" />
       <Hero images={data.allFile.edges} />
       <Brands />
+      <About />
     </Layout>
   )
 }
