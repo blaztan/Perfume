@@ -4,36 +4,24 @@ import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import { graphql } from "gatsby"
 import Brands from "../components/brands"
 import About from "../components/about"
+import Testimonial from "../components/testimonial"
+import NewsLetter from "../components/newsletter"
+import Footer from "../components/footer"
 
-const Home = ({ data }) => {
+const Home = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero images={data.allFile.edges} />
+      <Hero />
       <Brands />
       <About />
+      <Testimonial />
+      <NewsLetter />
+      <Footer />
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    allFile(filter: { extension: { regex: "/(jpg)/" } }) {
-      edges {
-        node {
-          base
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default Home

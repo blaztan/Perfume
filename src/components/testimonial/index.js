@@ -1,16 +1,77 @@
 import React from "react"
+import * as Styled from "./style"
+import Title from "../ui/SubTitle"
+import Carousel from "../ui/Carousel"
+import { graphql, useStaticQuery } from "gatsby"
+import FormatHtml from "../../utils/FormatHtml"
+import Paragraph from "../ui/Paragraph"
+import Image from "../image"
 
 export default function Testimonial() {
+  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+    query {
+      markdownRemark(frontmatter: { category: { eq: "testimonials" } }) {
+        frontmatter {
+          title
+          subTitle
+        }
+      }
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "testimonial" } } }
+      ) {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              cover {
+                childImageSharp {
+                  fluid(maxWidth: 80) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const sectionTitle = markdownRemark.frontmatter
+  const testimonials = allMarkdownRemark.edges
+
   return (
     <Styled.TestimonialWrapper>
       <Styled.Container>
         <div>
-          <Title span="testimonials" h2="What our client say" />
-          <Styled.Testimonials>
-            <Styled.TestimonialAvatar></Styled.TestimonialAvatar>
-            <Styled.TestimonialText></Styled.TestimonialText>
-          </Styled.Testimonials>
+          <Title span={sectionTitle.subTitle} h2={sectionTitle.title} />
         </div>
+        <Styled.Testimonials>
+          <Carousel>
+            {testimonials.map(item => {
+              const {
+                id,
+                html,
+                frontmatter: { cover, title },
+              } = item.node
+
+              return (
+                <Styled.Testimonial key={id}>
+                  <Styled.Image>
+                    <Image fluid={cover.childImageSharp.fluid} alt={title} />
+                  </Styled.Image>
+                  <Styled.Title>{title}</Styled.Title>
+
+                  <Paragraph>
+                    <FormatHtml content={html} />
+                  </Paragraph>
+                </Styled.Testimonial>
+              )
+            })}
+          </Carousel>
+        </Styled.Testimonials>
       </Styled.Container>
     </Styled.TestimonialWrapper>
   )

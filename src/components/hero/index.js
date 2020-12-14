@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Paragraph from "../ui/Paragraph"
 import Button from "../ui/Button"
 
-export default function Hero({ images }) {
+export default function Hero() {
   const { markdownRemark } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
@@ -13,6 +13,27 @@ export default function Hero({ images }) {
           title
           content
           linkText
+          img_01 {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          img_02 {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          img_03 {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
@@ -30,13 +51,19 @@ export default function Hero({ images }) {
               <span>{markdownRemark.frontmatter.linkText}</span>
             </Button>
           </Styled.HeroText>
-          <Image fluid={images[0].node.childImageSharp.fluid} />
+          <Image
+            fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
+          />
           <Styled.ImageContainer>
             <Styled.Image>
-              <Image fluid={images[2].node.childImageSharp.fluid} />
+              <Image
+                fluid={markdownRemark.frontmatter.img_02.childImageSharp.fluid}
+              />
             </Styled.Image>
             <Styled.Image style={{ marginLeft: "6rem" }}>
-              <Image fluid={images[1].node.childImageSharp.fluid} />
+              <Image
+                fluid={markdownRemark.frontmatter.img_03.childImageSharp.fluid}
+              />
             </Styled.Image>
           </Styled.ImageContainer>
         </Styled.Banner>
