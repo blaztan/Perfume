@@ -2,7 +2,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 export const Header = styled.header`
-  ${tw`absolute top-0 left-0 w-screen`}
+  ${tw`absolute top-0 left-0 w-screen z-10`}
 `
 
 export const Container = styled.div`
@@ -22,5 +22,5 @@ export const NavList = styled.ul`
 `
 
 export const NavItem = styled.li`
-  ${tw`font-medium text-gray-900 mx-4 hover:text-gray-700`}
+  ${tw`font-medium text-gray-900 mx-4 hover:text-gray-500 cursor-pointer`}
 `

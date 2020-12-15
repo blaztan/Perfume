@@ -26,7 +26,7 @@ export default function About() {
   `)
   return (
     <>
-      <Styled.AboutWrapper>
+      <Styled.AboutWrapper id="about">
         <Styled.AboutContainer>
           <Styled.CenterText>
             <Title
@@ -35,7 +35,12 @@ export default function About() {
             />
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
           </Styled.CenterText>
-          <Styled.ImageWrapper>
+          <Styled.ImageWrapper
+            data-sal="slide-left"
+            data-sal-delay="100"
+            data-sal-easing="ease"
+            data-sal-duration="900"
+          >
             <Image
               fluid={markdownRemark.frontmatter.cover.childImageSharp.fluid}
             />

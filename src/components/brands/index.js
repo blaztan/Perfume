@@ -40,7 +40,7 @@ export default function Brands() {
   `)
 
   return (
-    <Styled.BrandContainer>
+    <Styled.BrandContainer id="brands">
       <Styled.BrandContent>
         <Styled.BrandText>
           <Title

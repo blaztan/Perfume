@@ -10,7 +10,7 @@ const Image = ({ fluid }) => {
     <Img
       fluid={fluid}
       alt="Perfume"
-      style={{ position: "relative", height: "auto" }}
+      style={{ position: "relative", height: "100%" }}
     />
   )
 }

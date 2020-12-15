@@ -4,7 +4,6 @@ import Title from "../ui/SubTitle"
 import Carousel from "../ui/Carousel"
 import { graphql, useStaticQuery } from "gatsby"
 import FormatHtml from "../../utils/FormatHtml"
-import Paragraph from "../ui/Paragraph"
 import Image from "../image"
 
 export default function Testimonial() {
@@ -43,7 +42,7 @@ export default function Testimonial() {
   const testimonials = allMarkdownRemark.edges
 
   return (
-    <Styled.TestimonialWrapper>
+    <Styled.TestimonialWrapper id="testimonials">
       <Styled.Container>
         <div>
           <Title span={sectionTitle.subTitle} h2={sectionTitle.title} />
@@ -64,9 +63,7 @@ export default function Testimonial() {
                   </Styled.Image>
                   <Styled.Title>{title}</Styled.Title>
 
-                  <Paragraph>
-                    <FormatHtml content={html} />
-                  </Paragraph>
+                  <FormatHtml content={html} />
                 </Styled.Testimonial>
               )
             })}

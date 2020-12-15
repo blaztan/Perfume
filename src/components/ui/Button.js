@@ -7,5 +7,14 @@ export const PrimaryButton = styled.button`
 `
 
 export default function Button({ children }) {
-  return <PrimaryButton>{children}</PrimaryButton>
+  return (
+    <PrimaryButton
+      data-sal="slide-right"
+      data-sal-delay="900"
+      data-sal-easing="ease"
+      data-sal-duration="900"
+    >
+      {children}
+    </PrimaryButton>
+  )
 }

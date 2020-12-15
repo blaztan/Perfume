@@ -13,8 +13,22 @@ const SpanText = styled.span`
 export default function SubTitle({ span, h2 }) {
   return (
     <>
-      <SpanText>{span}</SpanText>
-      <Title>{h2}</Title>
+      <SpanText
+        data-sal="slide-down"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+        data-sal-duration="900"
+      >
+        {span}
+      </SpanText>
+      <Title
+        data-sal="slide-down"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        data-sal-duration="900"
+      >
+        {h2}
+      </Title>
     </>
   )
 }

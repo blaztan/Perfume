@@ -31,7 +31,7 @@ export const Line = styled.span`
 `
 
 export const ScrollContainer = styled.div`
-  ${tw`absolute bottom-0 -right-6`}
+  ${tw`absolute bottom-0 -right-6 cursor-pointer`}
 `
 
 export const ScrollPara = styled.p`
