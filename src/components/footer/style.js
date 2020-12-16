@@ -9,10 +9,10 @@ export const Container = styled.div`
   ${tw`max-w-screen-2xl mx-auto`}
 `
 export const FooterContent = styled.div`
-  ${tw`flex items-center justify-between`}
+  ${tw`flex lg:items-center space-y-6 px-4 justify-between flex-col md:space-y-0 md:flex-row`}
 `
 export const Social = styled.ul`
-  ${tw`flex space-x-6 text-2xl `}
+  ${tw`flex flex-col space-y-6 text-2xl md:space-y-0 md:space-x-6 md:flex-row`}
 `
 
 export const CopyRight = styled.p`
@@ -32,6 +32,6 @@ export const Text = styled.span`
 `
 
 export const ScrollTop = styled.div`
-  ${tw`absolute right-0   `}
+  ${tw`absolute right-0 hidden  `}
   top: -78%;
 `

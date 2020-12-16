@@ -60,30 +60,16 @@ export default function Brands() {
             price={markdownRemark.frontmatter.brand_01_price}
             link={markdownRemark.frontmatter.brandLink}
           />
-          <div style={{ marginLeft: "-10rem" }}>
+          <Styled.Brand_02>
             <Brand
               src={markdownRemark.frontmatter.brand_02.childImageSharp.fluid}
               name={markdownRemark.frontmatter.brand_02_name}
               price={markdownRemark.frontmatter.brand_02_price}
               link={markdownRemark.frontmatter.brandLink}
             />
-          </div>
+          </Styled.Brand_02>
         </div>
       </Styled.BrandContent>
     </Styled.BrandContainer>
   )
 }
-
-// frontmatter {
-//     title
-//     description
-//     date(formatString: "MMM DD, YYYY")
-//     tags
-//     cover {
-//       childImageSharp {
-//         fluid(maxWidth: 800) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }

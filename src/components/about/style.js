@@ -6,7 +6,7 @@ export const AboutWrapper = styled.section`
 `
 
 export const AboutContainer = styled.div`
-  ${tw`max-w-screen-2xl mx-auto px-4 sm:px-6 grid grid-cols-2 items-center relative`}
+  ${tw`max-w-screen-2xl mx-auto px-4 xl:px-0  grid-cols-1 grid xl:grid-cols-2 items-center relative`}
 `
 
 export const CenterText = styled.div`

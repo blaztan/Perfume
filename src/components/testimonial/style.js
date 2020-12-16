@@ -2,7 +2,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 export const TestimonialWrapper = styled.section`
-  ${tw`bg-gray-50 py-20 `}
+  ${tw`bg-gray-50 py-20 px-4`}
 `
 
 export const Container = styled.section`
@@ -10,7 +10,7 @@ export const Container = styled.section`
 `
 
 export const Testimonials = styled.div`
-  ${tw`max-w-screen-lg mx-auto w-full px-0 sm:px-16 mb-4 mt-20`};
+  ${tw`xl:max-w-screen-lg lg:max-w-2xl mx-auto w-full mb-4 mt-20`};
 `
 
 export const Testimonial = styled.div`

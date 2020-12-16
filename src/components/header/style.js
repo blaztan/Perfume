@@ -2,7 +2,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 export const Header = styled.header`
-  ${tw`absolute top-0 left-0 w-screen z-10`}
+  ${tw`absolute top-0 left-0 w-screen z-10 lg:hidden overflow-x-hidden`}
 `
 
 export const Container = styled.div`

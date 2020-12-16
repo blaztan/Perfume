@@ -5,7 +5,7 @@ export const Input = styled.input`
   ${tw`appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-gray-500 focus:z-10 sm:text-sm`}
 `
 export const NewsLetter = styled.div`
-  ${tw`py-20`}
+  ${tw`py-20 px-4`}
 `
 
 export const Container = styled.section`
@@ -13,7 +13,7 @@ export const Container = styled.section`
 `
 
 export const Form = styled.form`
-  ${tw`mt-20 flex space-x-6 max-w-screen-sm`}
+  ${tw`mt-20 flex flex-col md:flex-row md:space-x-6 space-y-6 max-w-screen-sm md:space-y-0 `}
 `
 
 export const Button = styled.button`

@@ -56,9 +56,11 @@ export default function Hero() {
             </Button>
           </Styled.HeroText>
           <Animated type="zoom-in" delay="400" duration="900">
-            <Image
-              fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
-            />
+            <Styled.MainImage>
+              <Image
+                fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
+              />
+            </Styled.MainImage>
           </Animated>
           <Styled.ImageContainer>
             <Animated type="slide-left" delay="500" duration="900">

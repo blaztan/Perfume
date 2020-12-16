@@ -2,24 +2,31 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 export const Banner = styled.div`
-  ${tw`grid  gap-4 w-full relative`}
-  grid-template-columns: 1fr 650px 1fr;
+  ${tw`grid  gap-4 w-full relative grid-cols-1`}
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 650px 1fr;
+  }
 `
 
 export const Hero = styled.div`
-  ${tw`flex items-center min-h-screen py-10 max-w-screen-2xl mx-auto px-4 sm:px-6 mb-20 relative`}
+  ${tw`flex items-center min-h-screen py-28 xl:py-10 max-w-screen-2xl mx-auto px-4 sm:px-6 mb-20 relative`}
 `
 
 export const ImageContainer = styled.div`
-  ${tw`flex flex-col space-y-8 justify-between`}
+  ${tw`flex flex-col space-y-8 justify-between hidden xl:block`}
 `
 
 export const Image = styled.div`
   ${tw`w-80 h-80 ml-4  overflow-hidden`}
 `
 
+export const MainImage = styled.div`
+  ${tw` h-full xl:max-w-full max-w-xl `}
+`
+
 export const HeroText = styled.div`
-  ${tw`self-center`}
+  ${tw`self-center xl:m-0 xl:p-0 mb-10 lg:max-w-full max-w-sm`}
 `
 
 export const Title = styled.h1`
@@ -31,7 +38,7 @@ export const Line = styled.span`
 `
 
 export const ScrollContainer = styled.div`
-  ${tw`absolute bottom-0 -right-6 cursor-pointer`}
+  ${tw`absolute bottom-0 -right-6 cursor-pointer hidden lg:block`}
 `
 
 export const ScrollPara = styled.p`
