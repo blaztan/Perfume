@@ -1,4 +1,8 @@
 module.exports = {
+  pathPrefix: "/my_project",
+}
+
+module.exports = {
   siteMetadata: {
     title: `Perfume`,
     description: `Landing page project made with gatsbyjs`,
@@ -31,21 +35,6 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`],
-      },
-    },
-
-    {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        threshold: 1,
-        once: true,
-        disable: false,
-        selector: "[data-sal]",
-        animateClassName: "sal-animate",
-        disabledClassName: "sal-disabled",
-        rootMargin: "0% 50%",
-        enterEventName: "sal:in",
-        exitEventName: "sal:out",
       },
     },
     {

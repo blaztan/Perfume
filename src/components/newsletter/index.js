@@ -24,22 +24,8 @@ const NewsLetter = () => {
           h2={markdownRemark.frontmatter.title}
         />
         <Styled.Form>
-          <Styled.Input
-            data-sal="slide-right"
-            data-sal-delay="200"
-            data-sal-easing="ease"
-            data-sal-duration="900"
-            type="email"
-            placeholder="Enter Your Email"
-          />
-          <Styled.Button
-            data-sal="slide-left"
-            data-sal-delay="200"
-            data-sal-easing="ease"
-            data-sal-duration="900"
-          >
-            {markdownRemark.frontmatter.linkText}
-          </Styled.Button>
+          <Styled.Input type="email" placeholder="Enter Your Email" />
+          <Styled.Button>{markdownRemark.frontmatter.linkText}</Styled.Button>
         </Styled.Form>
       </Styled.Container>
     </Styled.NewsLetter>

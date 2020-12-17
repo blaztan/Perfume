@@ -7,14 +7,5 @@ const Para = styled.p`
 `
 
 export default function Paragraph({ children }) {
-  return (
-    <Para
-      data-sal="slide-up"
-      data-sal-delay="700"
-      data-sal-easing="ease"
-      data-sal-duration="900"
-    >
-      {children}
-    </Para>
-  )
+  return <Para>{children}</Para>
 }

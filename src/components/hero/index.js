@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Paragraph from "../ui/Paragraph"
 import Button from "../ui/Button"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import Animated from "../ui/Animated"
 
 export default function Hero() {
   const { markdownRemark } = useStaticQuery(graphql`
@@ -46,49 +45,40 @@ export default function Hero() {
       <Styled.Hero id="home">
         <Styled.Banner>
           <Styled.HeroText>
-            <Animated type="slide-down" delay="700" duration="900">
-              <Styled.Title>{markdownRemark.frontmatter.title}</Styled.Title>
-            </Animated>
+            <Styled.Title>{markdownRemark.frontmatter.title}</Styled.Title>
+
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
             <Button id="#brands">
               <Styled.Line />
               <span>{markdownRemark.frontmatter.linkText}</span>
             </Button>
           </Styled.HeroText>
-          <Animated type="zoom-in" delay="400" duration="900">
-            <Styled.MainImage>
-              <Image
-                fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
-              />
-            </Styled.MainImage>
-          </Animated>
+
+          <Styled.MainImage>
+            <Image
+              fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
+            />
+          </Styled.MainImage>
+
           <Styled.ImageContainer>
-            <Animated type="slide-left" delay="500" duration="900">
-              <Styled.Image>
-                <Image
-                  fluid={
-                    markdownRemark.frontmatter.img_02.childImageSharp.fluid
-                  }
-                />
-              </Styled.Image>
-            </Animated>
-            <Animated type="slide-left" delay="600" duration="900">
-              <Styled.Image style={{ marginLeft: "6rem" }}>
-                <Image
-                  fluid={
-                    markdownRemark.frontmatter.img_03.childImageSharp.fluid
-                  }
-                />
-              </Styled.Image>
-            </Animated>
+            <Styled.Image>
+              <Image
+                fluid={markdownRemark.frontmatter.img_02.childImageSharp.fluid}
+              />
+            </Styled.Image>
+
+            <Styled.Image style={{ marginLeft: "6rem" }}>
+              <Image
+                fluid={markdownRemark.frontmatter.img_03.childImageSharp.fluid}
+              />
+            </Styled.Image>
           </Styled.ImageContainer>
         </Styled.Banner>
-        <Animated type="fade" delay="900" duration="900">
-          <Styled.ScrollContainer onClick={() => scrollTo("#brands")}>
-            <Styled.ScrollPara>Scroll</Styled.ScrollPara>
-            <Styled.ScrollLine />
-          </Styled.ScrollContainer>
-        </Animated>
+
+        <Styled.ScrollContainer onClick={() => scrollTo("#brands")}>
+          <Styled.ScrollPara>Scroll</Styled.ScrollPara>
+          <Styled.ScrollLine />
+        </Styled.ScrollContainer>
       </Styled.Hero>
     </>
   )

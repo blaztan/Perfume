@@ -35,12 +35,7 @@ export default function About() {
             />
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
           </Styled.CenterText>
-          <Styled.ImageWrapper
-            data-sal="slide-left"
-            data-sal-delay="100"
-            data-sal-easing="ease"
-            data-sal-duration="900"
-          >
+          <Styled.ImageWrapper>
             <Image
               fluid={markdownRemark.frontmatter.cover.childImageSharp.fluid}
             />

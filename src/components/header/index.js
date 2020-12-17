@@ -19,12 +19,7 @@ const Header = ({ siteTitle }) => {
   const breakPoint = innerWidth && innerWidth >= 1024
 
   return (
-    <Styled.Header
-      data-sal="slide-up"
-      data-sal-delay="100"
-      data-sal-easing="ease"
-      data-sal-duration="900"
-    >
+    <Styled.Header>
       <Styled.Container>
         {breakPoint ? (
           <Nav siteTitle={siteTitle} />
