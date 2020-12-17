@@ -50,7 +50,7 @@ export default function Hero() {
               <Styled.Title>{markdownRemark.frontmatter.title}</Styled.Title>
             </Animated>
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
-            <Button>
+            <Button id="#brands">
               <Styled.Line />
               <span>{markdownRemark.frontmatter.linkText}</span>
             </Button>

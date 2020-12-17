@@ -20,18 +20,17 @@ export const CopyRight = styled.p`
 `
 
 export const Line = styled.span`
-  ${tw`w-0.5 h-16 bg-white inline-block mr-2`}
+  ${tw`w-0.5 h-16 bg-gray-900 inline-block mr-2`}
 `
 export const Button = styled.div`
-  ${tw`w-16 h-auto flex flex-col  items-center bg-gray-900 py-6 cursor-pointer`}
+  ${tw`w-16 h-auto flex flex-col  items-center bg-white py-6 cursor-pointer`}
 `
 
 export const Text = styled.span`
-  ${tw`text-2xl text-white inline-block ml-4`}
+  ${tw`text-2xl text-gray-900 inline-block ml-4`}
   writing-mode: vertical-rl;
 `
 
 export const ScrollTop = styled.div`
-  ${tw`absolute right-0 hidden  `}
-  top: -78%;
+  ${tw`absolute right-0 bottom-0 top-0  `}
 `
