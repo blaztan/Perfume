@@ -38,5 +38,6 @@ export const Toggler = styled.div`
   ${tw`flex flex-col space-y-2 z-30 ml-auto lg:hidden`}
 `
 export const Bar = styled.div`
-  ${tw`w-10 h-0.5 bg-gray-900 rounded `}
+  ${tw`w-10 h-0.5 bg-gray-900 rounded `};
+  transition: transform 0.2s linear;
 `
