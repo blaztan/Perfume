@@ -3,6 +3,7 @@ module.exports = {
 }
 
 module.exports = {
+  pathPrefix: "/perfume_page",
   siteMetadata: {
     title: `Perfume`,
     description: `Landing page project made with gatsbyjs`,
