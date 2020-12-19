@@ -56,12 +56,10 @@ export default function Hero() {
             </Button>
           </Styled.HeroText>
 
-          <Styled.MainImage>
-            <div className="zoom-in">
-              <Image
-                fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
-              />
-            </div>
+          <Styled.MainImage className="zoom-in">
+            <Image
+              fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
+            />
           </Styled.MainImage>
 
           <Styled.ImageContainer>

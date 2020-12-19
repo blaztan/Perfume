@@ -6,7 +6,7 @@ export const BrandContainer = styled.section`
 `
 
 export const BrandContent = styled.div`
-  ${tw`max-w-screen-2xl mx-auto px-4 sm:px-6 xl:px-0 grid-cols-1 grid xl:grid-cols-2 xl:items-center relative`}
+  ${tw`2xl:max-w-screen-2xl lg:max-w-full lg:px-10 mx-auto px-4  grid-cols-1 grid xl:grid-cols-2 xl:items-center relative`}
 `
 
 export const BrandText = styled.div`

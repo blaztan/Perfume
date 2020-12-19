@@ -4,17 +4,25 @@ import tw from "twin.macro"
 export const Banner = styled.div`
   ${tw`grid  gap-4 w-full relative grid-cols-1`}
 
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr auto auto;
+  }
+
   @media (min-width: 1280px) {
+    grid-template-columns: 1fr 450px 1fr;
+  }
+
+  @media (min-width: 1536px) {
     grid-template-columns: 1fr 650px 1fr;
   }
 `
 
 export const Hero = styled.div`
-  ${tw`flex items-center min-h-screen py-28 xl:py-10 max-w-screen-2xl mx-auto px-4 sm:px-6 mb-20 relative`}
+  ${tw`flex items-center min-h-screen py-28 2xl:py-10 2xl:max-w-screen-2xl lg:max-w-screen-xl mx-auto px-4 sm:px-6 mb-20 relative`}
 `
 
 export const ImageContainer = styled.div`
-  ${tw`flex flex-col space-y-8 justify-between hidden xl:block`}
+  ${tw`flex flex-col space-y-8 justify-between hidden lg:block`}
 `
 
 export const Image = styled.div`
@@ -22,11 +30,11 @@ export const Image = styled.div`
 `
 
 export const MainImage = styled.div`
-  ${tw` h-full xl:max-w-full max-w-xl `}
+  ${tw` h-full xl:max-w-full max-w-xl lg:col-span-2 xl:col-span-1`}
 `
 
 export const HeroText = styled.div`
-  ${tw`self-center xl:m-0 xl:p-0 mb-10 lg:max-w-full max-w-sm`}
+  ${tw`self-center lg:col-span-3 xl:col-span-1 xl:m-0 xl:p-0 mb-10 lg:max-w-full max-w-sm`};
 `
 
 export const Title = styled.h1`
@@ -38,7 +46,7 @@ export const Line = styled.span`
 `
 
 export const ScrollContainer = styled.div`
-  ${tw`absolute bottom-0 -right-6 cursor-pointer hidden lg:block`}
+  ${tw`absolute bottom-0 -right-6 cursor-pointer hidden 2xl:block`}
 `
 
 export const ScrollPara = styled.p`
