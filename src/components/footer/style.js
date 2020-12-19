@@ -9,7 +9,7 @@ export const Container = styled.div`
   ${tw`2xl:max-w-screen-2xl lg:max-w-full lg:px-10 mx-auto`}
 `
 export const FooterContent = styled.div`
-  ${tw`flex md:items-center  md:justify-center  space-y-6 px-4 justify-between flex-col 2xl:space-y-0 2xl:flex-row`}
+  ${tw`flex md:items-center  md:justify-center  space-y-6 px-4 2xl:justify-between flex-col 2xl:space-y-0 2xl:flex-row`}
 `
 export const Social = styled.ul`
   ${tw`flex flex-col space-y-6 text-2xl md:space-y-0 md:space-x-6 md:flex-row`}
