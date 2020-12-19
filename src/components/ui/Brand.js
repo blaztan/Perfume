@@ -27,10 +27,10 @@ const BrandButton = styled.button`
 export default function Brand({ src, name, price, link }) {
   return (
     <BrandWrapper>
-      <ImageWrapper>
+      <ImageWrapper className="slide-left">
         <Image fluid={src} />
       </ImageWrapper>
-      <div>
+      <div className="slide-right">
         <BrandName>{name}</BrandName>
         <Paragraph>
           Price:

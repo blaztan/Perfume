@@ -45,7 +45,11 @@ export default function Testimonial() {
     <Styled.TestimonialWrapper id="testimonials">
       <Styled.Container>
         <div>
-          <Title span={sectionTitle.subTitle} h2={sectionTitle.title} />
+          <Title
+            slide={true}
+            span={sectionTitle.subTitle}
+            h2={sectionTitle.title}
+          />
         </div>
         <Styled.Testimonials>
           <Carousel>

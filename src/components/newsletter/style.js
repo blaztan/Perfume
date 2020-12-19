@@ -5,7 +5,7 @@ export const Input = styled.input`
   ${tw`appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-gray-500 focus:z-10 sm:text-sm`}
 `
 export const NewsLetter = styled.div`
-  ${tw`py-20 px-4`}
+  ${tw`py-40 px-4`}
 `
 
 export const Container = styled.section`

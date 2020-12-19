@@ -6,6 +6,7 @@ import "fontsource-josefin-sans"
 import GlobalStyles from "../../assets/styles/globalStyles"
 
 import Header from "../header/index"
+//import GsapAnimation from "../GsapAnimation"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

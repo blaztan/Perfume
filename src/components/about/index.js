@@ -32,10 +32,11 @@ export default function About() {
             <Title
               span={markdownRemark.frontmatter.subTitle}
               h2={markdownRemark.frontmatter.title}
+              slide={true}
             />
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
           </Styled.CenterText>
-          <Styled.ImageWrapper>
+          <Styled.ImageWrapper className="slide-right">
             <Image
               fluid={markdownRemark.frontmatter.cover.childImageSharp.fluid}
             />

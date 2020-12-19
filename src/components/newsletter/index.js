@@ -22,6 +22,7 @@ const NewsLetter = () => {
         <Title
           span={markdownRemark.frontmatter.subTitle}
           h2={markdownRemark.frontmatter.title}
+          slide={false}
         />
         <Styled.Form>
           <Styled.Input type="email" placeholder="Enter Your Email" />

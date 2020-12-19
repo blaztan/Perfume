@@ -1,18 +1,8 @@
 import React, { useEffect } from "react"
-
-import Layout from "../components/layout"
-
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Brands from "../components/brands"
-import About from "../components/about"
-import Testimonial from "../components/testimonial"
-import NewsLetter from "../components/newsletter"
-import Footer from "../components/footer"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-const Home = () => {
+const GsapAnimation = ({ children }) => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
       gsap.registerPlugin(ScrollTrigger)
@@ -57,6 +47,7 @@ const Home = () => {
         ease: "expo.inOut",
         scrollTrigger: {
           trigger: element,
+          markers: true,
         },
       })
     })
@@ -83,19 +74,7 @@ const Home = () => {
       },
     })
   }, [])
-
-  return (
-    <Layout>
-      <SEO title="Home" />
-
-      <Hero />
-      <Brands />
-      <About />
-      <Testimonial />
-      <NewsLetter />
-      <Footer />
-    </Layout>
-  )
+  return <>{children}</>
 }
 
-export default Home
+export default GsapAnimation

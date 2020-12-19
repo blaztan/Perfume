@@ -9,7 +9,10 @@ export const PrimaryButton = styled.button`
 
 export default function Button({ children, id }) {
   return (
-    <PrimaryButton onClick={() => (id ? scrollTo(id) : null)}>
+    <PrimaryButton
+      className="slide-left"
+      onClick={() => (id ? scrollTo(id) : null)}
+    >
       {children}
     </PrimaryButton>
   )

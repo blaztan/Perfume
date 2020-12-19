@@ -7,5 +7,5 @@ const Para = styled.p`
 `
 
 export default function Paragraph({ children }) {
-  return <Para>{children}</Para>
+  return <Para className="slide-up">{children}</Para>
 }

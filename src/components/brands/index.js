@@ -46,6 +46,7 @@ export default function Brands() {
           <Title
             span={markdownRemark.frontmatter.subTitle}
             h2={markdownRemark.frontmatter.title}
+            slide={true}
           />
           <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
           <Button>

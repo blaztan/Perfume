@@ -10,11 +10,11 @@ const SpanText = styled.span`
   ${tw`text-2xl uppercase text-gray-500 mb-2 font-bold `}
 `
 
-export default function SubTitle({ span, h2 }) {
+export default function SubTitle({ span, h2, slide }) {
   return (
     <>
-      <SpanText>{span}</SpanText>
-      <Title>{h2}</Title>
+      <SpanText className={`${slide ? "slide-down" : null}`}>{span}</SpanText>
+      <Title className={`${slide ? "slide-up" : null}`}>{h2}</Title>
     </>
   )
 }

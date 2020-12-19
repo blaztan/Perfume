@@ -45,7 +45,9 @@ export default function Hero() {
       <Styled.Hero id="home">
         <Styled.Banner>
           <Styled.HeroText>
-            <Styled.Title>{markdownRemark.frontmatter.title}</Styled.Title>
+            <Styled.Title className="slide-down">
+              {markdownRemark.frontmatter.title}
+            </Styled.Title>
 
             <Paragraph>{markdownRemark.frontmatter.content}</Paragraph>
             <Button id="#brands">
@@ -55,19 +57,24 @@ export default function Hero() {
           </Styled.HeroText>
 
           <Styled.MainImage>
-            <Image
-              fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
-            />
+            <div className="zoom-in">
+              <Image
+                fluid={markdownRemark.frontmatter.img_01.childImageSharp.fluid}
+              />
+            </div>
           </Styled.MainImage>
 
           <Styled.ImageContainer>
-            <Styled.Image>
+            <Styled.Image className="slide-left">
               <Image
                 fluid={markdownRemark.frontmatter.img_02.childImageSharp.fluid}
               />
             </Styled.Image>
 
-            <Styled.Image style={{ marginLeft: "6rem" }}>
+            <Styled.Image
+              style={{ marginLeft: "6rem" }}
+              className="slide-right"
+            >
               <Image
                 fluid={markdownRemark.frontmatter.img_03.childImageSharp.fluid}
               />

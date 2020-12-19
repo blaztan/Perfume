@@ -1,8 +1,4 @@
 module.exports = {
-  pathPrefix: "/my_project",
-}
-
-module.exports = {
   pathPrefix: "/perfume_page",
   siteMetadata: {
     title: `Perfume`,
@@ -21,13 +17,7 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
